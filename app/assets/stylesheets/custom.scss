@@ -12,12 +12,11 @@ textarea {
 
 .center {
     text-align: center;
-}
 
-.center h1 {
-    margin-bottom: 10px;
+    h1 {
+        margin-bottom: 10px;
+    }
 }
-
 .container-fluid {
     padding-bottom: 7px;
     padding-top: 10px;
@@ -53,6 +52,7 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.7em;
+    text-align: justify;
 }
 
 /* header */
@@ -65,12 +65,11 @@ p {
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
+    &:hover {
+        color: goldenrod;
+        text-decoration: none;
+    }
 } 
-
-#logo:hover {
-    color: goldenrod;
-    text-decoration: none;
-}
 
 .nav-link, a {
     text-decoration: none;
@@ -91,29 +90,25 @@ footer {
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
     color: #777;
+    a {
+        color: #555;
+        &:hover {
+            color: goldenrod;
+        }
+    }
+    small {
+        float: left;
+    }
+    ul {
+        float: right;
+        list-style: none;
+        li{
+            float: left;
+            margin-left: 15px;
+        }
+    }
 }
 
-footer a {
-    color: #555;
-}
-
-footer a:hover {
-    color: goldenrod;
-}
-
-footer small {
-    float: left;
-}
-
-footer ul {
-    float: right;
-    list-style: none;
-}
-
-footer ul li {
-    float: left;
-    margin-left: 15px;
-}
 
 
 
