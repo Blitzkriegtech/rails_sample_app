@@ -7,3 +7,14 @@ one:
 two:
   name: MyString
   email: MyString
+
+# test/fixtures/users.yml
+user_one:
+  name: "Test User One"
+  email: "user_one@example.com"
+  password_digest: <%= BCrypt::Password.create('password') %>
+
+user_two:
+  name: "Test User Two"
+  email: "user_two@example.com"  # Must be unique
+  password_digest: <%= BCrypt::Password.create('password') %>

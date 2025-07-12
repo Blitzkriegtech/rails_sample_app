@@ -191,6 +191,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     msgpack (1.8.0)
+    mutex_m (0.3.0)
     nenv (0.3.0)
     net-imap (0.5.9)
       date
@@ -404,6 +405,7 @@ DEPENDENCIES
   kamal
   minitest (= 5.15.0)
   minitest-reporters (= 1.5.0)
+  mutex_m
   pg (= 1.3.5)
   propshaft
   puma (>= 5.0)
