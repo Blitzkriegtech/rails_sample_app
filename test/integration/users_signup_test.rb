@@ -1,5 +1,4 @@
 require "test_helper"
-
 class UsersSignupTest < ActionDispatch::IntegrationTest
   test "invalid signup information" do
     get signup_path
@@ -11,8 +10,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_response :unprocessable_entity
     assert_template "users/new"
-    assert_select "div#<CSS id for error explanation"
-    assert_select "div.CSS class for field with error"
+    assert_select "div.alert"
   end
 
   test "valid signup information" do
