@@ -220,5 +220,44 @@ input {
 .dropdown-menu.active {
     display: block;
     background-color: ghostwhite;
+
+      /* Positioning & Layout */
+    position: absolute;
+    z-index: 1000;
+    min-width: 200px;
+    margin-top: 0.5rem;
+  
+    /* Borders & Shadows */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 
+                0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown Items */
+.dropdown-menu.active .dropdown-item {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.15s;
+  
+  /* Prevent text wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hover/Focus States */
+.dropdown-menu.active .dropdown-item:hover,
+.dropdown-menu.active .dropdown-item:focus {
+  background-color: #e6f7ff;
+  color: #0056b3;
+}
+
+/* Dropdown Divider */
+.dropdown-menu.active .divider {
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 

@@ -19,10 +19,10 @@
                   Account <b class="caret"></b>
                 </a>
                 <ul id="dropdown-menu" class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user, class: "nav-link" %></li>
-                  <li><%= link_to "Settings", "#", class: "nav-link" %></li>
+                  <li class="dropdown-item"><%= link_to "Profile", current_user, class: "nav-link" %></li>
+                  <li class="dropdown-item"><%= link_to "Settings", "#", class: "nav-link" %></li>
                   <li class="divider"></li>
-                  <li>
+                  <li class="dropdown-item">
                     <%= link_to "Log out", logout_path,
                                             data: { "turbo-method": :delete }, class: "nav-link" %>
                   </li>
