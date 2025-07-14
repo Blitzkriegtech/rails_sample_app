@@ -8,4 +8,13 @@ module ApplicationHelper
       "#{page_title} | #{base_title}"
     end
   end
+
+  def bootstrap_alert_class(type)
+      case type.to_sym
+      when :success then "success"
+      when :error, :danger, :alert then "danger"
+      when :notice, :info then "info"
+      else type.to_s
+      end
+  end
 end

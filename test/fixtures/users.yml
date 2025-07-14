@@ -18,3 +18,8 @@ user_two:
   name: "Test User Two"
   email: "user_two@example.com"  # Must be unique
   password_digest: <%= BCrypt::Password.create('password') %>
+
+aljun:
+ name: Aljun example
+ email: aljun@example.com
+ password_digest: <%= User.digest('password') %> 
