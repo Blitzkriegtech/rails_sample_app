@@ -1,17 +1,17 @@
 class User < ApplicationRecord
     attr_accessor :remember_token
 
-    before_save { self.email = email.downcase }
+    before_save :downcase_email
     has_secure_password
 
-    validates :password, presence: true, length: { minimum: 8 }
+    validates :password, presence: true, length: { minimum: 8 }, allow_nil: true
     validates :name, presence: true, length: { maximum: 50 }
 
     # email validator
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: { maximum: 255 },
                       format: { with: VALID_EMAIL_REGEX },
-                      uniqueness: true
+                      uniqueness: { case_sensitive: false }
 
     # Returns the hash digest of the given string.
     def User.digest(string)
@@ -47,5 +47,11 @@ class User < ApplicationRecord
     # reuse the remember digest for convenience.
     def session_token
       remember_digest || remember
+    end
+
+    private
+
+    def downcase_email
+      email.downcase!
     end
 end
