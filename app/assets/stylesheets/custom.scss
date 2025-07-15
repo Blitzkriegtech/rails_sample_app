@@ -216,6 +216,28 @@ input {
     }
 }
 
+/* Updated CSS */
+.checkbox {
+  display: inline-flex;  /* Use flex for perfect alignment */
+  align-items: center;   /* Vertically center children */
+  margin-bottom: 10px;
+  height: 1.5em;
+  gap: 10px;             /* Replace margin-left with modern gap */
+}
+
+.checkbox span {
+  font-weight: normal;
+}
+
+#session_remember_me {
+  width: auto;
+  margin: 0;             /* Simplify margin reset */
+  position: relative;    /* Better positioning */
+  top: 0;             /* Minor optical alignment adjustment */
+  transform: scale(1.25); /* 25% larger */
+  transform-origin: left; /* Keep left-aligned */
+}
+
 // Dropdown-menu
 .dropdown-menu.active {
     display: block;
