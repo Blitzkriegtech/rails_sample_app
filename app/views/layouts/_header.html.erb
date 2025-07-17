@@ -13,14 +13,14 @@
               <%= link_to "Help", help_path, class: "nav-link" %>
             </li>
             <% if logged_in? %>
-              <li><%= link_to "Users", "#", class: "nav-link" %></li>
+              <li><%= link_to "Users", users_path, class: "nav-link" %></li>
               <li class="dropdown">
                 <a href="#" id="account" class="nav-link dropdown-toggle">
                   Account <b class="caret"></b>
                 </a>
                 <ul id="dropdown-menu" class="dropdown-menu">
                   <li class="dropdown-item"><%= link_to "Profile", current_user, class: "nav-link" %></li>
-                  <li class="dropdown-item"><%= link_to "Settings", "#", class: "nav-link" %></li>
+                  <li class="dropdown-item"><%= link_to "Settings", edit_user_path(current_user), class: "nav-link" %></li>
                   <li class="divider"></li>
                   <li class="dropdown-item">
                     <%= link_to "Log out", logout_path,
