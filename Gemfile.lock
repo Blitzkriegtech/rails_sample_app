@@ -406,7 +406,7 @@ DEPENDENCIES
   dartsass-rails
   debug
   faker (= 2.21.0)
-  guard
+  guard (= 2.19.1)
   guard-minitest (= 2.4.6)
   importmap-rails
   jbuilder
