@@ -75,7 +75,7 @@ group :production do
 end
 
 gem "mutex_m"
-gem "faker",  "2.21.0"
+gem "faker",  "3.5.2"
 gem "bootstrap", "~> 5.3"
 gem "will_paginate", "3.3.1"
 gem "bootstrap-will_paginate", "1.0.0"
