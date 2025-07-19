@@ -1,0 +1,10 @@
+<h1>Sample App(MicroTwitter)</h1>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+  Welcome to Sample App(MicroTwitter)! Click on the link below to activate your account:account
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
